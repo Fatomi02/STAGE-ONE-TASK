@@ -9,13 +9,15 @@ currentDayOfTheWeek.innerHTML = day;
                   
 
 // Current UTC Time
-const currentUTCTimeElement = document.getElementById('currentUTCTime');
+function updateCurrentTime() {
 
-const currentUTCTime = Date.now();
+    const currentUTCTimeElement = document.getElementById('currentUTCTime');
+    const currentUTCTime = Date.now();
 
-currentUTCTimeElement.innerHTML = currentUTCTime.toString();
+    currentUTCTimeElement.innerHTML = currentUTCTime.toString();
 
+}
 
+updateCurrentTime()
+setInterval(updateCurrentTime, 100);
 
-
-currentUTCTime.innerHTML = ms;
